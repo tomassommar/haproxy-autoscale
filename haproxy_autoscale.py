@@ -55,7 +55,7 @@ def get_running_instances(access_key=None, secret_key=None, security_group=None)
             if reserved_instances:
                 for reservation in reserved_instances:
                     for instance in reservation.instances:
-                        if instance.stat == 'running':
+                        if instance.state == 'running':
                             instances_all_regions_list.append(instance)
     return instances_all_regions_list
 
